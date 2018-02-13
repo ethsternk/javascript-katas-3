@@ -10,11 +10,22 @@ h3 {
 }
 
 p {
-    margin-left: 2em;
+    margin-left: 38px;
     margin-bottom: 1.5em;
     padding: .2em;
     font-family: monospace;
     background-color: rgb(225, 225, 225);
     color: rgb(180, 0, 20);
     border: 1px solid rgba(127, 127, 127, .5);
+}
+
+button {
+    padding: 0.25em;
+    margin-left: 10px;
+}
+
+input {
+    height: 15px;
+    width: 30px;
+    margin-bottom: 0.5em;
 }

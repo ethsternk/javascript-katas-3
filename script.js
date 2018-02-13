@@ -4,9 +4,18 @@ const addNew = (text, div) => {
     document.getElementById(div).appendChild(newElement);
 }
 
+const clear = (div) => {
+    document.getElementById(div).innerHTML = "";
+}
+
 // add
 const add = (x, y) => x + y;
-addNew(add(2, 4), "add");
+document.getElementById("addButton").onclick = function () {
+    clear("add");
+    let x = parseInt(document.getElementById("addInput1").value);
+    let y = parseInt(document.getElementById("addInput2").value);
+    addNew(add(x, y), "add");
+}
 
 // multiply
 const multiply = (x, y) => {
@@ -16,7 +25,12 @@ const multiply = (x, y) => {
     }
     return ans;
 }
-addNew(multiply(6, 8), "multiply");
+document.getElementById("multiplyButton").onclick = function () {
+    clear("multiply");
+    let x = parseInt(document.getElementById("multiplyInput1").value);
+    let y = parseInt(document.getElementById("multiplyInput2").value);
+    addNew(multiply(x, y), "multiply");
+}
 
 // power
 const power = (x, y) => {
@@ -26,7 +40,12 @@ const power = (x, y) => {
     }
     return ans;
 }
-addNew(power(2, 8), "power");
+document.getElementById("powerButton").onclick = function () {
+    clear("power");
+    let x = parseInt(document.getElementById("powerInput1").value);
+    let y = parseInt(document.getElementById("powerInput2").value);
+    addNew(power(x, y), "power");
+}
 
 // factorial
 const factorial = (x) => {
@@ -38,7 +57,11 @@ const factorial = (x) => {
     }
     return ans;
 }
-addNew(factorial(4), "factorial");
+document.getElementById("factorialButton").onclick = function () {
+    clear("factorial");
+    let x = parseInt(document.getElementById("factorialInput").value);
+    addNew(factorial(x), "factorial");
+}
 
 // fibonacci
 const fibonacci = (x) => {
@@ -52,4 +75,8 @@ const fibonacci = (x) => {
     }
     return f2;
 }
-addNew(fibonacci(8), "fibonacci");
+document.getElementById("fibonacciButton").onclick = function () {
+    clear("fibonacci");
+    let x = parseInt(document.getElementById("fibonacciInput").value);
+    addNew(fibonacci(x), "fibonacci");
+}
